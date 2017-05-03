@@ -1,0 +1,22 @@
+This script would be helpful to deploy VDP in a 6.5 environment. The 6.5 Web Client has lot of issues while it comes to deployment of ova templates. This script utilizes the govc tool which is used to deploy ovf templates as an alternate to ovftool. 
+
+What is needed?
+1. A Linux machine
+
+How to get this working?
+1. Download the required VDP from the VMware download page
+2. Upload the ova on to the / partition of the Linux machine
+3. Place the script in root parition of the Linux machine
+4. Provide execute permissions: chmod u+x vdp-deploy.sh
+5. Run the script using ./vdp-deploy.sh
+
+Changes during deployment:
+In the ovf json file:
+
+> Remove the line Deployment: small
+> Remove the line Key: { vm.name
+> Remove the line Value: vSphere_data_protection}
+> Remove the , after } for the line for vami.netmask
+
+That's it. 
+For issues with script reach out to gsuhas@vmware.com
