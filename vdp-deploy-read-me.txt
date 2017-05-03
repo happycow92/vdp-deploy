@@ -17,6 +17,9 @@ In the ovf json file:
 > Remove the line Key: { vm.name
 > Remove the line Value: vSphere_data_protection}
 > Remove the , after } for the line for vami.netmask
+> Resource pool should be provided in the format:
+your_cluster_name/Resources/your_resource_pool_name
+> Anything with space has to be enclosesd within " " 
 
 That's it. 
 For issues with script reach out to gsuhas@vmware.com
